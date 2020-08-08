@@ -3,6 +3,8 @@ space explore game with pygame and opengl
 
 Explore the Space
 
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(305).png)
+
 1.	Opis projekta
 
 U ovom projektu napravljena je igrica korištenjem skupa modula pygame i OpenGL-a. Ideja je bila napraviti 3D igricu u kojoj igrač upravlja svemirskim brodom te putujući kroz svemir izbjegava sudare s asteroidima i planetima, te skuplja dodatne bodove skupljajući svemirsko smeće. 
