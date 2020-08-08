@@ -23,6 +23,10 @@ Projekt se sastoji od dvije Python datoteke: ui.py i main.py. U ui.py nalazi se 
 
 2.1.	Početno sučelje
 
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(286).png)
+
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(287).png)
+
 U Python datoteci ui.py nalazi se korisničko sučelje koje se prikazuje pri pokretanju igre, a u kojem je korišten skup modula pygame za interakciju s korisnikom. Osnovna klasa naziva gameIntro sadrži metode koje omogućavaju korisniku sljedeće opcije: pokretanje nove igre, pregled uputa kako igrati te opciju za izlazak iz programa.
 
     class gameIntro:
@@ -128,6 +132,8 @@ U Python datoteci ui.py nalazi se korisničko sučelje koje se prikazuje pri pok
     gameIntro.init()
  
 2.2.	Sučelje igre
+
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(289).png)
 
 U Python datoteci main.py nalazi se glavni dio igrice.
 
@@ -332,11 +338,15 @@ Klasom Sky prikazuje se pozadina igrice te se ona pomiče na osi y da bi se stek
  
 2.3. Klase i objekti igre
 
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(290).png)
+
 2.3.1.Brod
 
 Početna ideja
 
 Glavni objekt igrice je svemirski brod Ozon3. Svemirski brod se može uništiti ako mu bodovi padnu na nula, a to se može dogoditi slučajnim sudarom sa planetom, gubljenjem bodova u polju asteroida, svakim pogotkom od strane neprijateljskih brodova.
+
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(298).png)
 
 Implementacija
 
@@ -407,6 +417,8 @@ Početna ideja
 
 Na svom putovanju svemirom igrač može naići i na svemirski otpad koji pluta svemirom. Ukoliko igrača pogodi nešto od radioaktivnog otpada igra je gotova ako se brod uništi ili se zbog radioaktivnosti mogu poboljšati performanse broda . Ako igrač naiđe na plastični otpad i pokupi ga od svemirske udruge GRETA dobije za povrat plastike dodatne bodove. 
 
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(293).png)
+
 Implementacija
  
 Za objekte koji predstavljaju svemirsko smeće koje korisnik mora skupiti za dodatne bodove napravljene su dvije klase: Otpad i PlasticniOtpad. U klasi otpad objekt je nacrtan naredbom glutSolidCylinder() da bi predstavljao 'bačve' radioaktivnog sadržaja. Nasumičnim odabirom sudarom s objektom može se nauditi bodovima korisnika ili se mogu povećati, a ako je otpad radioaktivan može se i završiti igra. Navedene opcije su implementirane u metodi skupi() koja je prikazana gore. U klasi PlasticniOtpad objekt je iscrtan naredbama glutSolidCylinder() da bi predstavljao plastične boce koje ako igrač skupi donose dodatne bodove. U obje klase (i u ostalim klasama projekta) definirane su metode postavi() i postavi_new(). Metodu postavi() pozivamo kada igrač preleti pokraj tog objekta te se objekt ponovno postavlja na nasumične koordinate na osi x(lijevo-desno) i za u odnosu na igrača pomak na osi z u negativnom smjeru za 500. Metodu postavi_new() pozivamo prilikom inicijalizacije nove igre te se tada iscrtavaju objekti u vidljivom području ispred igrača.
@@ -469,6 +481,8 @@ Početna ideja
 
 Na svom svemirskom putovanju igrač može doći i do planeta. Ako igrač ne pazi moguć je i sudar sa nekim od planeta. Ukoliko se to dogodi igrač gubi sve osvojene bodove te se vraća na početak igre. Igrač ima mogućnost zaobići planet i nastaviti svoje putovanje, ali može i posjetiti planet. Međutim, ne može znati je li planet prijateljski ili neprijateljski. Ukoliko je planet bio neprijateljski te ga igrač odluči posjetiti biva zarobljen te ne može nastaviti igru ukoliko ne plati svojim bodovima, ako ih nema igra je gotova. Ukoliko se ispostavilo da je posjećeni planet bio prijateljski igrač dobiva dodatne bodove za hrabrost.
 
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(300).png)
+
 Implementacija
 
 Igračev svemirski brod kreće se 'stazama' sa vrijednostima -4, 0 i 4 na osi x pa je napravljena klasa za planete koji su nalaze na tim vrijednostima naziva PlanetSaPrstenom i na tim objektima se detektira interakcija s korisnikom, dok objekti klase UdaljeniPlanetSaPrstenom nemaju nikakvu interakciju sa korisnikom već su samo prikazani u daljini.  Planeti su predstavljeni sferom naredbom glutSolidSphere(3, 100, 100) te prstenima oko sfere naredbom glutWireTorus().
@@ -519,6 +533,8 @@ Igračev svemirski brod kreće se 'stazama' sa vrijednostima -4, 0 i 4 na osi x 
 
  
 2.3.4.UdaljeniPlanetSaPrstenom
+
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(308).png)
 
 Ideja i implementacija
 
@@ -578,6 +594,8 @@ Ova klasa definira planete koji se nalaze izvan okvira u kojima se kreće svemir
  
 2.3.5.SvemirskiBrod
 
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(304).png)
+
 Početna ideja
 
 Neprijateljski svemirski brod VirusX može nauditi bodovima igrača pucanjem na njegov brod ili sudarom s igračevim brodom. Igrač može susresti i prijateljski svemirski brod ProB te ako ga slučajno uništi time uništava i pola svojih bodova.
@@ -634,6 +652,8 @@ Neprijateljski svemirci imaju crveni brod te se sudarom s njima igra završava t
 Početna ideja
 
 Asteroidi su objekti koje igrač mora uspješno zaobići u poljima asteroida. Postoje i posebni maleni asteroidi sa planeta Omega3 koji ukoliko ih igrač pokupi mogu udvostručiti bodove
+
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(298).png)
 
 Implementacija
 
@@ -773,6 +793,8 @@ Kontrola igre:
 o	Tipka P : pauziranje (ili nastavak) igre
 
 o	Tipka Q ili tipka ESC : izlazak iz igre
+
+![GitHub Logo](https://github.com/jjosipa404/RG/blob/master/Screenshots/Snimka%20zaslona%20(296).png)
 
 Implementacija
 
